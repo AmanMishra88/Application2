@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    working_directory: ~repo
-    working_directory: ~/npm-lint
+    working_directory: ~/repo
+                       ~/npm-lint
     docker:
       - image: circleci/node:8-browsers
     steps:
