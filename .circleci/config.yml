@@ -12,8 +12,8 @@ jobs:
             - v1-deps-{{ .Branch }}
             - v1-deps
       - run:
-          name: lint
-          command: npm run lint
+          name: Install dependencies
+          command: npm install
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
@@ -23,7 +23,9 @@ jobs:
       - run:
           name: Build
           command: npm run build:client:prod
-
+      - run:
+          name: lint
+          command: npm run lint
 workflows:
   version: 2
   build_and_activate:
