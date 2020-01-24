@@ -12,8 +12,8 @@ jobs:
             - v1-deps-{{ .Branch }}
             - v1-deps
       - run:
-          name: Install dependencies
-          command: npm install
+          name: lint
+          command: npm run lint
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
