@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "build:client:dev": "webpack --config=_webpack/webpack.config.js --env=dev",
-    "build:client:prod": "webpack --config=_webpack/webpack.config.js --env=prod"
+    "build:client:prod": "webpack --config=_webpack/webpack.config.js --env=prod",
+    "build:client:devserver": "webpack-dev-server --config=_webpack/webpack.config.js --env=dev"
   },
   "repository": {
     "type": "git",
